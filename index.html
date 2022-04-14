@@ -165,7 +165,7 @@
   </head>
   <body>
     
-<header class="site-header pt-2">
+<header class="site-header py-2">
   <nav class="container d-flex flex-column flex-md-row justify-content-between align-content-center">
     <a class="" href="#" aria-label="Product">
       <img style="width: 200px" src="logo.jpg" alt="..." />
@@ -189,22 +189,25 @@
       <div class="col-12 col-md-7 col-lg-8 position-relative" style="min-height:500px;">
         <div class="my-3 py-3 position-relative" style="z-index:9;">
           <div class="display-1 fw-bold text-white">Discover<br></div>
-          <div class="h3 text-white text-uppercase">Amazing Deals! & An A Amazing Time!</div>
+          <div class="h3 text-white text-uppercase">Amazing Deals! & Amazing Times!</div>
         </div>
         <div class="product-device shadow-sm"></div>
 <!--         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
       </div>
       <div class="col-12 col-md-5 col-lg-4">
         <div class="card form-card mx-auto shadow">
-          <div class="card-header bg-warning">
+            <!-- Message Responder -->
+          <div class="card-header bg-warning d-block" id="message-default">
             <div class="container-fluid text-center"><b>Limited time offer! </b><span id="time">05:00</span> minutes!</div>
           </div>
-          <!-- Message Responder -->
-          <!-- <h4 class="container-fluid text-center text-dark bg-success pt-2 pb-2 m-0" id="message-handler">
-            Message Sent
-          </h4> -->
-          <div class="card-body px-5 py-4">
-            <form class="form-container" id="form-1" target="https://discoverbranson.com/landingForm/" method="GET">
+          <h5 class="card-header bg-success text-center d-none" id="message-success">
+            Success
+          </h5>
+          <h5 class="card-header bg-danger text-center d-none" id="message-error">
+            Error, Try Again
+          </h5>
+          <div class="card-body px-5 py-4" id="card-body">
+            <form class="form-container" id="form-1">
               <h5 class="card-title">Special title treatment</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
               <div class="mb-3">
@@ -371,6 +374,35 @@
 <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     
     <script type="module">
+    // Message Handler 
+    function messageHandle(type){
+        const message_default = document.getElementById('message-default');
+        const message_success = document.getElementById('message-success');
+        const message_error = document.getElementById('message-error');
+
+        if (type === 'success'){
+            message_default.classList.remove("d-block");
+            message_default.classList.add("d-none");
+            message_error.classList.remove("d-block");
+            message_error.classList.add("d-none");
+            message_success.classList.remove("d-none");
+            message_success.classList.add("d-block"); 
+        } else if (type === 'error'){
+            message_default.classList.remove("d-block");
+            message_default.classList.add("d-none");
+            message_error.classList.remove("d-none");
+            message_error.classList.add("d-block");
+            message_success.classList.remove("d-block");
+            message_success.classList.add("d-none");
+        } else if (type === 'default') {
+            message_default.classList.remove("d-none");
+            message_default.classList.add("d-block");
+            message_error.classList.remove("d-block");
+            message_error.classList.add("d-none");
+            message_success.classList.remove("d-block");
+            message_success.classList.add("d-none");
+        }
+    }
     // Form 
     const form_1 = document.getElementById('form-1');
 
@@ -380,7 +412,7 @@
         const field_2 = document.getElementById('form-date').value;
         const field_3 = document.getElementById('form-select-2').value;
 
-        var url = "https://discoverbranson.com/landingForm/?code=1234";
+        var url = "https://discoverbranson.com/landingForm";
         var params = `code=1234&field_1=${field_1}&field_2=${field_2}&field_3=${field_3}`;
         var http = new XMLHttpRequest();
 
@@ -392,8 +424,6 @@
             }
         }
         http.send(null);
-
-        
     })
     // Form 
       var slider = tns({
