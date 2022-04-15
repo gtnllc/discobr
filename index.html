@@ -200,12 +200,6 @@
           <div class="card-header bg-warning d-block" id="message-default">
             <div class="container-fluid text-center"><b>Limited time offer! </b><span id="time">05:00</span> minutes!</div>
           </div>
-          <h5 class="card-header bg-success text-center d-none" id="message-success">
-            Success
-          </h5>
-          <h5 class="card-header bg-danger text-center d-none" id="message-error">
-            Error, Try Again
-          </h5>
           <div class="card-body px-5 py-4" id="card-body">
             <form class="form-container" id="form-1">
               <h5 class="card-title"><b>Coupons & Packages</b></h5>
@@ -213,7 +207,7 @@
               <div class="mb-3">
                 <label for="form-select-1" class="form-label">Have you ever been to Branson before?</label>
                 <select class="form-select" name="form-select-1" id="form-select-1" required>
-                  <option selected>Select One...</option>
+                  <option selected value="">Select One...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
                 </select>
@@ -225,7 +219,7 @@
               <div class="mb-3">
                 <label for="form-select-2" class="form-label">Do you already have lodging booked?</label>
                 <select class="form-select" name="form-select-2" id="form-select-2" required>
-                  <option selected>Select One...</option>
+                  <option selected value="">Select One...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
                 </select>
@@ -362,46 +356,185 @@
   
   
 </main>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="feedbackModalLabel">Feedback Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="" id="message-success">
+              Success, one of our representative would be in touch with you soon.
+            </div>
+            <div class="" id="message-error">
+              Error, please contact us 888-888-8888
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <style>
+    
+      /* Absolute Center Spinner */
+      .loading {
+        position: fixed;
+        z-index: 999;
+        height: 2em;
+        width: 2em;
+        overflow: show;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
 
-<!--     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+      /* Transparent Overlay */
+      .loading:before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+          background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .5));
+
+        background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.5));
+      }
+
+      /* :not(:required) hides these rules from IE9 and below */
+      .loading:not(:required) {
+        /* hide "loading..." text */
+        font: 0/0 a;
+        color: transparent;
+        text-shadow: none;
+        background-color: transparent;
+        border: 0;
+      }
+
+      .loading:not(:required):after {
+        content: '';
+        display: block;
+        font-size: 10px;
+        width: 1em;
+        height: 1em;
+        margin-top: -0.5em;
+        -webkit-animation: spinner 150ms infinite linear;
+        -moz-animation: spinner 150ms infinite linear;
+        -ms-animation: spinner 150ms infinite linear;
+        -o-animation: spinner 150ms infinite linear;
+        animation: spinner 150ms infinite linear;
+        border-radius: 0.5em;
+        -webkit-box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+      box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+      }
+
+      /* Animation */
+
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-o-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <div class="loading d-none">Loading&#8230;</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     
     <script type="module">
     // Message Handler 
+    const message_success = document.getElementById('message-success');
+    const message_error = document.getElementById('message-error');
+    const loading = document.querySelector('.loading');
+    let feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'), {})
+      
     function messageHandle(type){
-        const message_default = document.getElementById('message-default');
-        const message_success = document.getElementById('message-success');
-        const message_error = document.getElementById('message-error');
 
         if (type === 'success'){
-            message_default.classList.remove("d-block");
-            message_default.classList.add("d-none");
             message_error.classList.remove("d-block");
             message_error.classList.add("d-none");
             message_success.classList.remove("d-none");
             message_success.classList.add("d-block"); 
         } else if (type === 'error'){
-            message_default.classList.remove("d-block");
-            message_default.classList.add("d-none");
             message_error.classList.remove("d-none");
             message_error.classList.add("d-block");
             message_success.classList.remove("d-block");
             message_success.classList.add("d-none");
-        } else if (type === 'default') {
-            message_default.classList.remove("d-none");
-            message_default.classList.add("d-block");
-            message_error.classList.remove("d-block");
-            message_error.classList.add("d-none");
-            message_success.classList.remove("d-block");
-            message_success.classList.add("d-none");
         }
+        feedbackModal.show();
     }
     // Form 
     const form_1 = document.getElementById('form-1');
@@ -412,18 +545,44 @@
         const field_2 = document.getElementById('form-date').value;
         const field_3 = document.getElementById('form-select-2').value;
 
-        var url = "https://discoverbranson.com/landingForm";
+        var url = "https://discoverbranson.com/landingForm/";
         var params = `code=1234&field_1=${field_1}&field_2=${field_2}&field_3=${field_3}`;
         var http = new XMLHttpRequest();
+        loading.classList.remove('d-none');
 
-        http.open("GET", url+"?"+params, true);
-        http.onreadystatechange = function()
-        {
-            if(http.readyState == 4 && http.status == 200) {
-                alert(JSON.parse(http.responseText));
-            }
+//         http.open("GET", url+"?"+params, true);
+//         http.onreadystatechange = function()
+//         {
+//             if(http.readyState == 4 && http.status == 200) {
+//               let type = 'default';
+//               let response = JSON.parse(http.responseText)
+//               if(typeof response.status != 'undefined'){
+//                 type = response.status;
+//               }
+//               loading.classList.add('d-none');
+//               messageHandle(type);
+// //                 alert(JSON.parse(http.responseText));
+//             }
+//         }
+//         http.send(null);
+      
+      
+      
+      fetch(url+"?"+params)
+      .then(response => response.json())
+      .then(data => {
+        let type = 'default';
+        if(typeof data.status != 'undefined'){
+          type = data.status;
         }
-        http.send(null);
+        loading.classList.add('d-none');
+        messageHandle(type);
+      });
+      
+      
+      
+      
+      
     })
     // Form 
       var slider = tns({
