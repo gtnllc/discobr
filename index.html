@@ -16,7 +16,8 @@
     <!-- LazySize PlugIn
     <script src="lazysizes.min.js" async=""></script> -->
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+    <link href="bootstrap-stripped.css" rel="stylesheet"/>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -34,6 +35,7 @@
         -moz-user-select: none;
         user-select: none;
       }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -43,9 +45,11 @@
       .container {
         max-width: 960px;
       }
+
       /*
        * Custom translucent site header
        */
+
       .site-header {
         
 /*         background-color: rgba(0, 0, 0, .85);
@@ -60,9 +64,11 @@
         color: #fff;
         text-decoration: none;
       }
+
       /*
        * Dummy devices (replace them with your own or something else entirely!)
        */
+
       .product-device {
         position: absolute;
         right: 25%;
@@ -73,6 +79,7 @@
         border-radius: 21px;
         transform: rotate(30deg);
       }
+
       .product-device::before {
         position: absolute;
         top: 10%;
@@ -88,6 +95,7 @@
         background-size:cover;
         z-index: -1;
       }
+
       .product-device-2 {
         top: -25%;
         right: auto;
@@ -95,9 +103,12 @@
         left: 5%;
         background-color: #e5e5e5;
       }
+
+
       /*
        * Extra utilities
        */
+
       .flex-equal > * {
         flex: 1;
       }
@@ -160,42 +171,6 @@
         0.05em -0.05em black,
         0.05em 0.05em black;
       }
-       /* Slider CSS */
-      
-        .tns-outer {
-            padding: 0 !important
-        }
-        .tns-slider {
-            -webkit-transition: all 0s;
-            -moz-transition: all 0s;
-            transition: all 0s
-        }
-        .tns-slider>.tns-item {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box
-        }
-        .tns-horizontal.tns-subpixel {
-            white-space: nowrap
-        }
-        .tns-horizontal.tns-subpixel>.tns-item {
-            display: inline-block;
-            vertical-align: top;
-            white-space: normal
-        }
-        .tns-ovh {
-            overflow: hidden
-        }
-        .tns-visually-hidden {
-            position: absolute;
-            left: -10000em
-        }
-        .tns-vpfix {
-            white-space: nowrap
-        }
-        .tns-vpfix>div,.tns-vpfix>li {
-            display: inline-block
-        }
     </style>
 
     
@@ -258,8 +233,6 @@
                 <label for="phone" class="form-label">Phone?</label>
                 <input type="tel" class="form-control" name="phone" id="phone" required>
               </div>
-              <!-- Hidden Code -->
-              <input type="hidden" id="hiddenCode" name="code" value="1234">
               <div class="w-100 px-3">
                 <button type="submit" class="btn btn-primary w-100 rounded-pill">GET STARTED!</button>
               </div>
@@ -542,9 +515,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <!-- CSS test -->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">-->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
@@ -578,12 +549,16 @@
     <!-- End Meta Pixel Code -->
     <script>
     // Lazy Load
-//     $( document ).ready(function() {
-    
-//     });
-//     window.onload = function() {
-      
-//     };
+    // $( document ).ready(function() {
+    //   const queryString = window.location.search;
+    //   const urlParams = new URLSearchParams(queryString);
+    // });
+    var queryString;
+    var urlParams;
+    document.addEventListener("DOMContentLoaded", () => {
+      queryString = window.location.search;
+      urlParams = new URLSearchParams(queryString);
+    });
     // Message Handler 
     const message_success = document.getElementById('message-success');
     const message_error = document.getElementById('message-error');
@@ -614,19 +589,26 @@
         const last_name = document.getElementById('last-name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
+        const source = urlParams.get('source');
+        const campaign = urlParams.get('campaign');
+        const adgroup = urlParams.get('adgroup');
+        const content = urlParams.get('content');
+        const keyword = urlParams.get('keyword');
+        const device = urlParams.get('device');
 
         var url = "https://discoverbranson.com/landingForm/";
         let params = new URLSearchParams({
+          code: '1234',
           first_name: first_name,
           last_name: last_name,
           email: email,
           phone: phone,
-          source: "",
-          campaign: "",
-          adgroup: "",
-          content: "",
-          keyword: "",
-          device: ""
+          source: source,
+          campaign: campaign,
+          adgroup: adgroup,
+          content: content,
+          keyword: keyword,
+          device: device
         });
         params = params.toString();
         var http = new XMLHttpRequest();
