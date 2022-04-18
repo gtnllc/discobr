@@ -27,6 +27,51 @@
 
 
     <style>
+      
+      /* Slider CSS */
+      
+      .tns-outer {
+          padding: 0 !important
+      }
+
+      .tns-slider {
+          -webkit-transition: all 0s;
+          -moz-transition: all 0s;
+          transition: all 0s
+      }
+
+      .tns-slider>.tns-item {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box
+      }
+
+      .tns-horizontal.tns-subpixel {
+          white-space: nowrap
+      }
+
+      .tns-horizontal.tns-subpixel>.tns-item {
+          display: inline-block;
+          vertical-align: top;
+          white-space: normal
+      }
+
+      .tns-ovh {
+          overflow: hidden
+      }
+
+      .tns-visually-hidden {
+          position: absolute;
+          left: -10000em
+      }
+
+      .tns-vpfix {
+          white-space: nowrap
+      }
+
+      .tns-vpfix>div,.tns-vpfix>li {
+          display: inline-block
+      }
     	
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -570,7 +615,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">-->
     <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
