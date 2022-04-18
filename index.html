@@ -1,34 +1,7 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCKK1N5KTB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-XCKK1N5KTB');
-    </script>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1039655840291510');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1039655840291510&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+  <head id="head">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -580,7 +553,13 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
     <script>
-     
+    // Lazy Load
+//     $( document ).ready(function() {
+    
+//     });
+//     window.onload = function() {
+      
+//     };
     // Message Handler 
     const message_success = document.getElementById('message-success');
     const message_error = document.getElementById('message-error');
@@ -612,7 +591,8 @@
         const field_3 = document.getElementById('form-select-2').value;
 
         var url = "https://discoverbranson.com/landingForm/";
-        var params = `code=1234&field_1=${field_1}&field_2=${field_2}&field_3=${field_3}`;
+        var params = `code=1234&field_1=${field_1}&field_2=${field_2}&field_3=${field_3}
+        &source&campaign&adgroup&content&keyword&device`;
         var http = new XMLHttpRequest();
         loading.classList.remove('d-none');
 
@@ -642,6 +622,7 @@
           type = data.status;
         }
         loading.classList.add('d-none');
+        console.log(data);
         messageHandle(type);
       });
       
