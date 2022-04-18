@@ -217,24 +217,20 @@
               <h5 class="card-title"><b>Coupons & Packages</b></h5>
               <p class="card-text"><b>Claim Your Free Coupons & Packages</b></p>
               <div class="mb-3">
-                <label for="form-select-1" class="form-label">Have you ever been to Branson before?</label>
-                <select class="form-select" name="form-select-1" id="form-select-1" required>
-                  <option selected value="">Select One...</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                </select>
+                <label for="first-name" class="form-label">First Name?</label>
+                <input type="text" class="form-control" name="first-name" id="first-name" required>
               </div>
               <div class="mb-3">
-                <label for="form-date" class="form-label">When Are You Planning to Travel?</label>
-                <input type="date" class="form-control" name="form-date" id="form-date" required>
+                <label for="last-name" class="form-label">Last Name?</label>
+                <input type="text" class="form-control" name="last-name" id="last-name" required>
               </div>
               <div class="mb-3">
-                <label for="form-select-2" class="form-label">Do you already have lodging booked?</label>
-                <select class="form-select" name="form-select-2" id="form-select-2" required>
-                  <option selected value="">Select One...</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                </select>
+                <label for="email" class="form-label">Email?</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone?</label>
+                <input type="tel" class="form-control" name="phone" id="phone" required>
               </div>
               <!-- Hidden Code -->
               <input type="hidden" id="hiddenCode" name="code" value="1234">
@@ -521,9 +517,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCKK1N5KTB"></script>
@@ -586,13 +582,25 @@
 
     form_1.addEventListener('submit', (e) => {
         e.preventDefault();
-        const field_1 = document.getElementById('form-select-1').value;
-        const field_2 = document.getElementById('form-date').value;
-        const field_3 = document.getElementById('form-select-2').value;
+        const first_name = document.getElementById('first-name').value;
+        const last_name = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
 
         var url = "https://discoverbranson.com/landingForm/";
-        var params = `code=1234&field_1=${field_1}&field_2=${field_2}&field_3=${field_3}
-        &source&campaign&adgroup&content&keyword&device`;
+        const params = new URLSearchParams({
+          first_name: first_name,
+          last_name: last_name,
+          email: email,
+          phone: phone,
+          source: "",
+          campaign: "",
+          adgroup: "",
+          content: "",
+          keyword: "",
+          device: ""
+        });
+        params = params.toString();
         var http = new XMLHttpRequest();
         loading.classList.remove('d-none');
 
