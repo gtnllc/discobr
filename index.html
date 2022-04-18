@@ -588,7 +588,7 @@
         const phone = document.getElementById('phone').value;
 
         var url = "https://discoverbranson.com/landingForm/";
-        const params = new URLSearchParams({
+        let params = new URLSearchParams({
           first_name: first_name,
           last_name: last_name,
           email: email,
