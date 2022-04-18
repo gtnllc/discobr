@@ -658,7 +658,38 @@
     document.addEventListener("DOMContentLoaded", () => {
       queryString = window.location.search;
       urlParams = new URLSearchParams(queryString);
+      sendZapier();
     });
+    // Sending Analytics 
+    function sendZapier() {
+        const source = urlParams.get('source');
+        const campaign = urlParams.get('campaign');
+        const adgroup = urlParams.get('adgroup');
+        const content = urlParams.get('content');
+        const keyword = urlParams.get('keyword');
+        const device = urlParams.get('device');
+        if (source || campaign || adgroup || content || keyword || device) {
+          var url = "https://discoverbranson.com/landingForm?code=4321";
+          let data = {
+              source: source || '',
+              campaign: campaign || '',
+              adgroup: adgroup || '',
+              content: content || '',
+              keyword: keyword || '',
+              device: device || ''
+          };
+          // Posting
+          fetch(url, {
+          method: "POST",
+          body: JSON.stringify(data)
+          })
+          // .then(response => console.log('Analytics Sent To Zapier'))
+          .then(response => response.json())
+          .then(response => console.log(response))
+          .catch(err => console.log('Error Sending Analytics To Zapier'));
+        }
+    };
+      
     // Message Handler 
     const message_success = document.getElementById('message-success');
     const message_error = document.getElementById('message-error');
