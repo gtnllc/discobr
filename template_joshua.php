@@ -153,7 +153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="rounded-circle border card-top-circle bg-white shadow-sm" style="background-image:url('images/dining-thumb.jpg');"></div>
                 <div class="form-container px-4">
                   <h5 class="card-title font-weight-xtra-bold mt-5 pt-4">Dining Deals</h5>
-                  <p class="card-text">300+ Restaurants, Maps, Coupons, Insider Information for the best dining accommodations available including little known gems that you won’t want to miss</p>
+                  <p class="card-text">300+ Restaurants, Maps, Coupons, Insider Information for the best dining accommodations available including little known gems that you won’t want to miss.</p>
                   <div class="w-100 px-3">
                     <button type="button" class="scroll-button btn btn-primary w-100 text-uppercase"><i class="fa fa-sign-in" aria-hidden="true"></i> Join Now</button>
                   </div>
@@ -244,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>
           Give us a call at <strong><span class="convert-phone">1-888-400-8804</span></strong> to speak with a friendly Branson E-Club representative. We are local folks who would love to help with questions about this offer or to chat about town.
         </p>
-        <p><em>Copyright © 2022 by Discover Branson</em></p>
+        <p><em>Copyright © 2022 by Discover Branson</em> | SOT#: 0000000000</p>
         <div class="footer-bottom-inline">
           <div class="footer-bottom-inline-container">
               <p class="footer-bottom-text">

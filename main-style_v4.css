@@ -160,6 +160,8 @@
   text-align: center;
   margin: 0 7px 0 0;
   display: flex;
+  position: relative;
+  top: 0px;
 }
 .chat-box-inner .fa-solid.fa-phone {
     color: #254666;
@@ -691,5 +693,28 @@ a {
   }
   #mobileViewOverlay {
     display: inherit;
+  }
+  .bottom-chat-box {
+    width: 180px;
+    height: 45px;
+    left: 50%;
+    margin-left: -90px;
+  }
+  .chat-box-inner span {
+    line-height: 1.75rem;
+    font-size: 1rem;
+  }
+  .chat-icon-circle {
+    width: 24px;
+    height: 24px;
+    top: 2px;
+  }
+  .bottom-chat-box:hover {
+    height: 52px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main-left-container {
+    min-height: 280px;
   }
 }
