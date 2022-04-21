@@ -650,6 +650,16 @@ a {
   }
 }
 
+/* New feature */
+
+#event-showcase {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+}
+
+/* Responsive Design */
+
 @media screen and (max-width: 767px) {
   .mobile-inverted-box {
     flex-direction: column-reverse;
