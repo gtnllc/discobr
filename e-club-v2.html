@@ -152,7 +152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="h4 mb-0 font-weight-bold text-white">Experience the best that Branson has to offer</div>
     </div>
 
-    <div class="container-fluid bg-white text-center pt-5 pb-3 mb-5">
+    <div class="container-fluid bg-white text-center pt-5 pb-3 mb-5" id="mainBodyTop">
       <div class="h3 mb-0 font-weight-bold">Branson E-Club Lifetime Membership Includes:</div>
     </div>
     <div class="container-fluid pt-5" style="max-width:1140px;">
@@ -251,15 +251,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </main>
   <div id="event-showcase">
-    <div class="vc_row wpb_row vc_inner"><div class="wpb_column column_container col-md-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: center" class="vc_custom_heading">E-Club Member Ticket Deals</h2></div>
-	<div class="wpb_text_column wpb_content_element ">
-		<div class="wpb_wrapper">
-			<p><!-- FareHarbor item grid of flow #633081 --><br>
-        <iframe id="1650569665489-15817235591152978" frameborder="0" border="0" width="100%" src="https://fareharbor.com/embeds/items/discoverbransonmo/?flow=633081&amp;full-items=no&amp;ref=eclub&amp;u=81245b02-7e5d-4869-aaec-4aa8ac76b733&amp;from-ssl=yes&amp;back=https://discoverbranson.com/new-eclub-member-guides/%3Ffirst_name%3DTest%26last_name%3DTest%26email%3Dtest%2540gmail.com%26phone%3D1234567890%26source%3D%26campaign%3D%26adgroup%3D%26content%3D%26keyword%3D%26device%3Ddesktop" title="FareHarbor" style="height: 3535px;"></iframe></p>
-
-		</div>
-	</div>
-</div></div></div></div>
+    <div class="vc_row wpb_row vc_inner">
+      <div class="wpb_column column_container col-md-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper"><h2 style="text-align: center;margin-bottom: 20px;" class="vc_custom_heading">E-Club Member Ticket Deals</h2></div>
+          <div class="wpb_text_column wpb_content_element ">
+            <div class="wpb_wrapper" id="cardsInsert">
+                
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   <div id="pageFooter" class="footer pt-5 pb-5">
     <div class="footer-inner">
@@ -313,6 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       google();
       facebook();
       formHeight = document.getElementById('mainForm').clientHeight;
+      getCards();
     });
 
     document.querySelectorAll(".scroll-button").forEach(button => {
@@ -320,6 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         scrollFunction();
       });
     });
+    
 
     // Message Handler 
     const message_success = document.getElementById('message-success');
@@ -346,7 +353,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       //console.log(formHeight);
       document.getElementById("mainForm").style.height = formHeight + "px";
     }
-
+    
+    const getCards = () => {
+      const container = document.getElementById('cardsInsert');
+      fetch("./cards/cards.json")
+      .then(response => response.json())
+      .then(json => {
+        json.cards.forEach(card => {
+        container.innerHTML += `
+            <div class="card event-card-custom" style="background-image:url(${card.img});">
+                <div class="container custom-event-card-body">
+                  <div class="custom-event-card-body-inner">
+                    <p class="event-title">${card.title}</p>
+                    <div class="custom-direction">
+                       <div class="event-info-box">
+                            <p class="event-info-price">${card.price}</p>
+                            <p class="event-info-time">${card.time}</p>
+                       </div>                  
+                      <button class="btn btn-primary custom-event-button" onclick="scrollFunction()">Book</button> 
+                    </div>
+                  </div>                             
+                </div>                  
+            </div>  
+      `;
+      })
+      });    
+    };
+    
     const getDeviceType = () => {
       const ua = navigator.userAgent;
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {

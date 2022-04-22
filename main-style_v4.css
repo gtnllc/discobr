@@ -494,6 +494,86 @@ a {
   text-shadow: 0px 0px 30px black;
 }
 
+/* Card */
+#cardsInsert {
+  display: inline-block;
+  width: 100%;
+}
+.event-card-custom:nth-child(3n+1) {
+    clear: left;
+}
+
+.event-card-custom {
+    float: left;
+    margin: 1%;
+}
+.event-card-custom {
+  cursor: pointer;
+  position: relative;
+  width: 31%;
+  height: 185px;
+  background-size: cover;
+  margin-bottom: 2em;
+  border: none;
+  border-radius: 10px;
+}
+.event-card-custom:hover .custom-event-card-body {
+  background-image: linear-gradient(to bottom, rgba(25,25,25,.2), rgba(25,25,25,.8));
+}
+.custom-event-card-body {
+  border-radius: 10px;
+  position: absolute;
+  height: 100%;
+  color: #fff;
+  background-image: linear-gradient(to bottom, rgba(25,25,25,.1), rgba(25,25,25,.6));
+  padding: 0;
+}
+.custom-event-card-body-inner {
+  position: absolute;
+  bottom: 0px;
+  padding: 7px 10px;
+  width: 100%;
+}
+.custom-info-box {
+  padding:0;
+  margin: 0;
+  display: flex;
+}
+.custom-direction {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-event-button {
+  padding: 0;
+  height: 30px;
+  width: 60px;
+}
+.event-title {
+    display: block;
+    max-width: 640px;
+    margin-bottom: 5px;
+    font-size: 21px;
+    line-height: 23px;
+    text-shadow: 1px 1px #000;
+}
+.event-info-box {
+    display: inline-flex;
+}
+.event-info-price {
+    margin: 0 10px 0 0;
+    border: 1px solid #fff;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: .8rem;
+    line-height: 1.4rem;
+}
+.event-info-time {
+    padding: 5px 0;
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.4rem;
+}
+
 /* Footer */
 
 .footer {
@@ -521,6 +601,12 @@ a {
   margin: 0;
   width: 50%;
   padding: 0 10px;
+}
+
+/* Raqndom */
+#mainBodyTop {
+  position: relative;
+  z-index: 2;
 }
 
 /* Absolute Center Spinner */
@@ -722,9 +808,38 @@ a {
   .bottom-chat-box:hover {
     height: 52px;
   }
+  .event-card-custom:nth-child(3n+1) {
+    clear: none;
+  }
+  .event-card-custom:nth-child(2n+1) {
+    clear: left;
+  }
+  .event-card-custom {
+    width: 48%;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .event-card-custom:nth-child(2n+1) {
+    clear: none;
+  }
+  .event-card-custom:nth-child(1n+1) {
+    clear: left;
+  }
+  .event-card-custom {
+    width: 98%;
+    margin-bottom: 0.1em;
+  }
 }
 @media screen and (max-width: 450px) {
   .main-left-container {
     min-height: 280px;
   }
 }
+
+
+
+
+
+
+
