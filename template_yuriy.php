@@ -29,8 +29,6 @@
   <link href="main-style_v2.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <!--  Lucky Orange  -->
-  <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8e1c2e34"></script>
 </head>
 
 <body>
@@ -55,11 +53,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="col-12 col-md-7 col-lg-7 position-relative main-left-container">
             <div id="mobileViewOverlay"></div>
             <div class="my-3 py-3 position-relative custom-shadow" style="z-index:9;">
-              <div id="topTitleText" class="display-1 fw-bold text-uppercase text-white custom-shadow">BRANSON<br/>E-CLUB</div>
-              <div class="h3 text-white text-uppercase custom-shadow pb-3">Exclusive Deals &amp; Discounts</div>
+              <div id="topTitleText" class="display-1 fw-bold text-uppercase text-white custom-shadow px-2">BRANSON<br/>E-CLUB</div>
+              <div class="h3 text-white text-uppercase custom-shadow pt-2 pb-3 px-2">Exclusive Deals &amp; Discounts</div>
               <ul id="header-extra-bullets">
                 <li>INSTANT BRANSON COUPONS</li><li>GAS DISCOUNTS</li><li>BRANSON TRAVEL GUIDES</li><li>MEMBER ONLY PRICES</li><li>INSIDER INFO &amp; MORE</li>
               </ul>
+              <p class="mobile-only-list">
+                  INSTANT BRANSON COUPONS | GAS DISCOUNTS | BRANSON TRAVEL GUIDES | MEMBER ONLY PRICES
+              </p>
             </div>
             <div class="product-device-outer">
               <div class="product-overlay-shadow"></div>
@@ -71,14 +72,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="mainForm" class="card form-card mx-auto shadow">
               <!-- Message Responder -->
               <div class="card-header bg-warning d-block" id="message-default">
-                <div id="countdownContainer" class="container-fluid text-center">
-                  <div id="offerText"><i class="fas fa-bolt"></i> <em>SPECIAL OFFER ENDS:</em></div>
-                  <div id="timeStack">
-                    <div id="time">
-                      <div id="timerMin">42</div>:
-                      <div id="timerSec">00</div>
+                <div class="card-header-inner">
+                  <div id="countdownContainer" class="container-fluid text-center">
+                    <div id="offerText"><i class="fas fa-bolt"></i> <em>SPECIAL OFFER ENDS:</em></div>
+                    <div id="timeStack">
+                      <div id="time">
+                        <div id="timerMin">42</div>:
+                        <div id="timerSec">00</div>
+                      </div>
+                      <div id="bottomText">min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sec</div>
                     </div>
-                    <div id="bottomText">min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sec</div>
                   </div>
                 </div>
               </div>
@@ -158,10 +161,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="h4 mb-0 font-weight-bold text-white">Experience the best that Branson has to offer</div>
     </div>
     
-    <div class="container-fluid text-center pt-3 pb-1 mt-3 d-flex flex-column justify-content-evenly align-items-center">
+    <div id="mainBodyTop" class="container-fluid text-center pt-5 pb-1 d-flex flex-column justify-content-evenly align-items-center">
       <h4>Average member savings of over $217 per visit</h4>
     </div>
-     <div id="mainBodyTop" class="container-fluid bg-white text-center pt-2 pb-3 mb-5">
+     <div class="container-fluid bg-white text-center pt-2 pb-3 mb-5">
       <div class="h3 mb-0 font-weight-bold">Branson E-Club Lifetime Membership Includes:</div>
     </div>
 

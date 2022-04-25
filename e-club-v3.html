@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="top-parent-container">
       <div class="container-fluid position-relative p-lg-5 main-top-container">
         <div class="row px-0 pb-1 px-xl-5 main-top-container-inner">
-          <div class="col-12 col-md-7 col-lg-7 position-relative main-left-container">
+          <div class="col-12 col-md-6 col-lg-7 position-relative main-left-container">
             <div id="mobileViewOverlay"></div>
             <div class="my-3 py-3 position-relative custom-shadow" style="z-index:9;">
               <div id="topTitleText" class="display-1 fw-bold text-uppercase text-white custom-shadow px-2">BRANSON<br/>E-CLUB</div>
@@ -70,18 +70,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="product-device-image"></div>
             </div>
           </div>
-          <div class="col-12 col-md-5 col-lg-5 main-right-container">
+          <div class="col-12 col-md-6 col-lg-5 main-right-container">
             <div id="mainForm" class="card form-card mx-auto shadow">
               <!-- Message Responder -->
               <div class="card-header bg-warning d-block" id="message-default">
-                <div id="countdownContainer" class="container-fluid text-center">
-                  <div id="offerText"><i class="fas fa-bolt"></i> <em>SPECIAL OFFER ENDS:</em></div>
-                  <div id="timeStack">
-                    <div id="time">
-                      <div id="timerMin">42</div>:
-                      <div id="timerSec">00</div>
+                <div class="card-header-inner">
+                  <div id="countdownContainer" class="container-fluid text-center">
+                    <div id="offerText"><i class="fas fa-bolt"></i> <em>SPECIAL OFFER ENDS:</em></div>
+                    <div id="timeStack">
+                      <div id="time">
+                        <div id="timerMin">42</div>:
+                        <div id="timerSec">00</div>
+                      </div>
+                      <div id="bottomText">min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sec</div>
                     </div>
-                    <div id="bottomText">min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sec</div>
                   </div>
                 </div>
               </div>
@@ -497,12 +499,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Form 
     var slider = tns({
       container: ".my-slider",
-      items: 5,
-      slideBy: "page",
+      items: 6,
+      slideBy: 3,
       mouseDrag: true,
       swipeAngle: false,
-      speed: 400,
-      controls: false,
+      autoplay: true,
+      autoplayHoverPause: true,
+      speed: 1000,
+      autoplayTimeout: 3000,
+      controls: true,
       nav: false,
     });
     //   Timer
