@@ -76,8 +76,7 @@
        */
 
 .site-header {
-  background: #fff;
-  height: 77px;
+    background: #fff;
 }
 
 .site-header a {
@@ -178,42 +177,40 @@
   background: rgba(25,25,25,.10);
 }
 .product-device {
-  right: 20%;
-  bottom: -39%;
+  position: absolute;
+  right: 25%;
+  bottom: -30%;
   width: 300px;
   height: 540px;
-  background: url(images/iphone.png);
-  background-size: 100% 100%;
-  position: absolute;
-  z-index: 1;
+  background-color: #333;
   border-radius: 21px;
   transform: rotate(30deg);
 }
 .product-overlay-shadow {
     position: absolute;
-    right: 21%;
-    bottom: -41%;
+    right: 25%;
+    bottom: -30%;
     width: 300px;
     height: 540px;
     transform: rotate(30deg);
-    background: rgba(25,25,25,.35);
+    background: rgba(25,25,25,.10);
     z-index: 1;
-    border-radius: 50px;
 }
 
-.product-device-image {
+.product-device::before {
   position: absolute;
-  right: 18%;
-  bottom: -32%;
-  width: 271px;
-  height: 540px;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
-  background-image: url(images/dining-coupons.png);
+  background-image: url('images/background-image.jpg');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: 0;
-  transform: rotate(30deg);
+  background-size: cover;
+  z-index: -1;
 }
 
 .product-device-2 {
@@ -454,7 +451,7 @@ i.fa.fa-sign-in, i.fa.fa-dollar {
 }
 
 .main-top-container {
-  background: rgba(25,25,25,.35);
+  background: rgba(25,25,25,.15);
 }
 .main-top-container-inner {
     max-width: 1200px;
@@ -607,18 +604,10 @@ a {
   padding: 0 10px;
 }
 
-/* Random */
+/* Raqndom */
 #mainBodyTop {
   position: relative;
-  z-index: 1;
-}
-#header-extra-bullets {
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-    font-size: 20px;
-    line-height: 34px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+  z-index: 2;
 }
 
 /* Absolute Center Spinner */

@@ -26,7 +26,7 @@
   <meta name="theme-color" content="#7952b3">
 
   <!-- Main Page Style -->
-  <link href="main-style_v4.css" rel="stylesheet" />
+  <link href="main-style_v1.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
 </head>
