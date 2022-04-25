@@ -26,9 +26,11 @@
   <meta name="theme-color" content="#7952b3">
 
   <!-- Main Page Style -->
-  <link href="main-style_v4.css" rel="stylesheet" />
+  <link href="main-style_v2.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
+  <!--  Lucky Orange  -->
+  <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8e1c2e34"></script>
 </head>
 
 <body>
