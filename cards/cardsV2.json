@@ -1,0 +1,382 @@
+{
+  "cards": [
+    {
+        "img": "./images/card-images/1.png",
+        "title": "ABBA Tribute – Thank You For the Music",
+        "price": "$31 – /$57.75",
+        "time": "2 Hours",
+        "age": "Ages 4+"
+    },
+    {
+        "img": "./images/card-images/2.png",
+        "title": "Absolutely Country, Definitely Gospel",
+        "price": "$34 – /$59.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/3.png",
+        "title": "Amazing Grand Shanghai Circus",
+        "price": "$18 – /$63",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/4.png",
+        "title": "Amazing Pets",
+        "price": "$16 – /$88",
+        "time": "2 Hours",
+        "age": "Ages 4+"
+    },
+    {
+        "img": "./images/card-images/5.png",
+        "title": "America's Top Country Hits",
+        "price": "$38 – /$60",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/6.png",
+        "title": "A Neil Diamond Tribute",
+        "price": "$33 – /$60",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/7.png",
+        "title": "Anthems of Rock",
+        "price": "$21.50 – /$71.27",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/8.png",
+        "title": "Awesome 80's",
+        "price": "$37 – /$59.43",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/9.png",
+        "title": "Back to the Bee Gees",
+        "price": "$31 – /$57.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/10.png",
+        "title": "Beach Boys California Dreamin",
+        "price": "$31 – /$57.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/11.png",
+        "title": "Best of Motown and More",
+        "price": "$17.50 – /$50.25",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/12.png",
+        "title": "The Blackwoods",
+        "price": "$20.50 – /$63.55",
+        "time": "2 Hours",
+        "age": "Ages 13+"
+    },
+     {
+        "img": "./images/card-images/13.png",
+        "title": "Branson Country USA",
+        "price": "$5.67 – /$87",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/14.png",
+        "title": "Branson Dinosaur Museum",
+        "price": "7.50 – /$18.50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+     {
+        "img": "./images/card-images/15.png",
+        "title": "British Invasion",
+        "price": "$32 – /$55.25",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/16.png",
+        "title": "Broadway to Bublé Starring George Dyer",
+        "price": "$37 – /$59.43",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/17.png",
+        "title": "Carpenters Once More",
+        "price": "$33 – /$60",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/18.png",
+        "title": "CJ Newsom's Country Classic and Comedy Show",
+        "price": "$26.50 – /$39.62",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/19.png",
+        "title": "Clay Cooper’s Country Music Express",
+        "price": "$23.25 – /$84",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/20.png",
+        "title": "Comedy Jamboree",
+        "price": "$15 – /$86",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/21.png",
+        "title": "Creedence Cool water Revue",
+        "price": "$17.50 – /$45.76",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/22.png",
+        "title": "Dancing Queen",
+        "price": "$21.50 – /$71.27",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/23.png",
+        "title": "Dean Martin & Friends starring Trey Dees",
+        "price": "$33.50 – /$45.76",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/24.png",
+        "title": "Decades by Pierce Arrow",
+        "price": "$19 – /$50.50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/25.png",
+        "title": "Doug Gabriel Show",
+        "price": "$30 – /$58.50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/26.png",
+        "title": "Down Home Country",
+        "price": "$16 – /$88",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/27.png",
+        "title": "Dublin's Irish Tenors & The Celtic Ladies",
+        "price": "$21.50 – /$71.27",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/28.png",
+        "title": "The Duttons",
+        "price": "$10 – /$82",
+        "time": "2 Hours",
+        "age": "Ages 4+"
+    },
+    {
+        "img": "./images/card-images/29.png",
+        "title": "Funny Farm Dinner Feud",
+        "price": "$27.50 – /$46.50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/30.png",
+        "title": "Georgina Holiday Show",
+        "price": "$17.50 – /$45.76",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/31.png",
+        "title": "Grand Jubilee",
+        "price": "$16 – /$88",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/32.png",
+        "title": "Hamners' Unbelievable Variety Show",
+        "price": "$34.75 – /$57.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/33.png",
+        "title": "Haygoods",
+        "price": "$25 – /$78",
+        "time": "2 Hours",
+        "age": "Ages 4+"
+    },
+    {
+        "img": "./images/card-images/34.png",
+        "title": "Mickey Gilley & Johnny Lee: Urban Cowboys Rides Again",
+        "price": "$17 – /$63",
+        "time": "2 Hours",
+        "age": "Ages 5+"
+    },
+    {
+        "img": "./images/card-images/35.png",
+        "title": "Mike Walker Lasting Impressions",
+        "price": "Inquire",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/36.png",
+        "title": "Milsap Almost Like a Song",
+        "price": "$34 – /$59.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/37.png",
+        "title": "Nashville Roadhouse Live",
+        "price": "$17.50 – /$50.25",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/38.png",
+        "title": "New South Gospel",
+        "price": "$16 – /$88",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/39.png",
+        "title": "New Jersey Nights",
+        "price": "$21.50 – /$71.27",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/40.png",
+        "title": "The Outlaw Eagles",
+        "price": "$33.50 – /$45.76",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/41.png",
+        "title": "Ozarks Country",
+        "price": "$15 – /$86",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/42.png",
+        "title": "Ozarks Gospel",
+        "price": "$15 – /$86",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/43.png",
+        "title": "Phil Dalton Theater of Illusion",
+        "price": "$33 – /$45.76",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/44.png",
+        "title": "Pierce Arrow Country",
+        "price": "$19 – /$50.50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/45.png",
+        "title": "Reza Edge of Illusion",
+        "price": "$18 – /$73.50",
+        "time": "2 Hours",
+        "age": "Ages 4+"
+    },
+    {
+        "img": "./images/card-images/46.png",
+        "title": "Ric Steel",
+        "price": "$17.50 – /$50",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/47.png",
+        "title": "ELVIS - Story of a King",
+        "price": "$38 – /$39.62",
+        "time": "2 Hours",
+        "age": "Ages 13+"
+    },
+    {
+        "img": "./images/card-images/48.png",
+        "title": "Sedaka Songbook",
+        "price": "$34 – /$59.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/49.png",
+        "title": "SIX",
+        "price": "$21 – /$66.33",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/50.png",
+        "title": "The Sons Music Celebration",
+        "price": "$34 – /$68",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/51.png",
+        "title": "Statler Brothers Revisited",
+        "price": "$30 – /$57.75",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/52.png",
+        "title": "Veterans Memorial Museum",
+        "price": "$5.50 – /$29.94",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/53.png",
+        "title": "World’s Largest Toy Museum",
+        "price": "$13 – /$58",
+        "time": "2 Hours",
+        "age": "All Ages"
+    },
+    {
+        "img": "./images/card-images/54.png",
+        "title": "Buy One Get One Tickets!",
+        "price": "Buy One, Get One 1/2 Price!",
+        "time": "",
+        "age": "All Ages"
+    }  
+  ]
+}
