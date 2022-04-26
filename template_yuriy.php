@@ -5,9 +5,26 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
   <meta name="generator" content="Hugo 0.84.0">
-  <meta name="description" content="Discount Tickets and Lodging for Branson Missouri Shows, Attractions, Hotels, Resorts and Condominiums. Guaranteed Lowest Prices. Will match or beat any price!">
+  <!-- Primary Meta Tags -->
+  <title>Discover Branson E-Club</title>
+  <meta name="title" content="🎉 Discover Branson E-Club 🎉">
+  <meta name="description" content="Discount Tickets and Lodging for Branson Missouri Shows, Attractions, Hotels, Resorts, and Condominiums. Guaranteed Lowest Prices. Will match or beat any price!">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dev1.nettravel.io/discbr/template_yuriy.php">
+  <meta property="og:title" content="🎉 Discover Branson E-Club 🎉">
+  <meta property="og:description" content="Discount Tickets and Lodging for Branson Missouri Shows, Attractions, Hotels, Resorts, and Condominiums. Guaranteed Lowest Prices. Will match or beat any price!">
+  <meta property="og:image" content="https://discoverbranson.com/wp-content/uploads/2018/11/tiwtter-card.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://dev1.nettravel.io/discbr/template_yuriy.php">
+  <meta property="twitter:title" content="🎉 Discover Branson E-Club 🎉">
+  <meta property="twitter:description" content="Discount Tickets and Lodging for Branson Missouri Shows, Attractions, Hotels, Resorts, and Condominiums. Guaranteed Lowest Prices. Will match or beat any price!">
+  <meta property="twitter:image" content="https://discoverbranson.com/wp-content/uploads/2018/11/tiwtter-card.jpg">
+  
   <link rel="icon" href="images/favicon.png">
   <title>Discover Branson</title>
 
@@ -29,6 +46,8 @@
   <link href="main-style_v2.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
+  <!--  Lucky Orange  -->
+  <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8e1c2e34"></script>
 </head>
 
 <body>
@@ -50,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="top-parent-container">
       <div class="container-fluid position-relative p-lg-5 main-top-container">
         <div class="row px-0 pb-1 px-xl-5 main-top-container-inner">
-          <div class="col-12 col-md-7 col-lg-7 position-relative main-left-container">
+          <div class="col-12 col-md-6 col-lg-7 position-relative main-left-container">
             <div id="mobileViewOverlay"></div>
             <div class="my-3 py-3 position-relative custom-shadow" style="z-index:9;">
               <div id="topTitleText" class="display-1 fw-bold text-uppercase text-white custom-shadow px-2">BRANSON<br/>E-CLUB</div>
@@ -68,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="product-device-image"></div>
             </div>
           </div>
-          <div class="col-12 col-md-5 col-lg-5 main-right-container">
+          <div class="col-12 col-md-6 col-lg-5 main-right-container">
             <div id="mainForm" class="card form-card mx-auto shadow">
               <!-- Message Responder -->
               <div class="card-header bg-warning d-block" id="message-default">
@@ -259,13 +278,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid text-center pt-0 pb-3 mb-4 d-flex flex-column justify-content-evenly align-items-center">
+  </main>
+  <div id="event-showcase">
+    <div class="vc_row wpb_row vc_inner">
+      <div class="wpb_column column_container col-md-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper"><h2 style="text-align: center;margin-bottom: 20px;" class="vc_custom_heading">E-Club Member Ticket Deals</h2></div>
+            <div class="wpb_text_column wpb_content_element ">
+              <div class="wpb_wrapper" id="cardsInsert">
+                
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center pt-0 pb-3 mb-4 d-flex flex-column justify-content-evenly align-items-center">
       <img class="" src="./images/bbb-a.png" alt="..." style="width: 200px;" />
     </div>
-
-  </main>
-  
    <div id="pageFooter" class="footer pt-5 pb-5">
     <div class="footer-inner">
       <p>
@@ -305,53 +336,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
   <script>
-    var queryString;
-    var urlParams;
-    var formHeight;
-    var redirectSeconds = 5;
-    var paramStr;
-    document.addEventListener("DOMContentLoaded", () => {
-      queryString = window.location.search;
-      urlParams = new URLSearchParams(queryString);
-      phoneConvert();
-      autoPhoneInputConvert();
-      google();
-      facebook();
-      formHeight = document.getElementById('mainForm').clientHeight;
-    });
+    // Google Analytics
+    function google() {
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5XNX7Z8');
+    };
 
-    document.querySelectorAll(".scroll-button").forEach(button => {
-      button.addEventListener('click', function handleClick(event) {
-        scrollFunction();
-      });
-    });
-
-    // Message Handler 
-    const message_success = document.getElementById('message-success');
-    const message_error = document.getElementById('message-error');
-    let loading = document.querySelector('.loading');
-
-    function messageHandle(type) {
-      document.querySelector(".modal").style.display = "inherit";
-      if (type === 'success') {
-        message_success.style.display = "inherit";
-        let newInterval = setInterval(function() {
-          redirectSeconds--;
-          document.getElementById("redirectSuccessTimer").innerText = redirectSeconds;
-          if (redirectSeconds === 0) {
-            clearInterval(newInterval);
-            location.href = paramStr;
-          }
-        }, 1000);
-      } else if (type === 'error') {
-        message_error.style.display = "inherit";
-      }
-
-      document.getElementById('form-1').style.display = "none";
-      //console.log(formHeight);
-      document.getElementById("mainForm").style.height = formHeight + "px";
+    // Facebook Pixel
+    function facebook() {
+      ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1033924800538096');
+      fbq('track', 'PageView');
     }
-
+    
     const getDeviceType = () => {
       const ua = navigator.userAgent;
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -403,6 +429,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     };
+    
+    const getCards = () => {
+      const container = document.getElementById('cardsInsert');
+      fetch("./cards/cards.json")
+      .then(response => response.json())
+      .then(json => {
+        json.cards.forEach(card => {
+        container.innerHTML += `
+            <div class="card event-card-custom" style="background-image:url(${card.img});">
+                <div class="container custom-event-card-body">
+                  <div class="custom-event-card-body-inner">
+                    <p class="event-title">${card.title}</p>
+                    <div class="custom-direction">
+                       <div class="event-info-box">
+                            <p class="event-info-price">${card.price}</p>
+                            <p class="event-info-time">${card.time}</p>&nbsp;&#8226;&nbsp;
+                            <p class="event-info-time">${card.age}</p>
+                       </div>                  
+                      <button class="btn btn-primary custom-event-button" onclick="scrollFunction()">Book</button> 
+                    </div>
+                  </div>                             
+                </div>                  
+            </div>  
+      `;
+      })
+      });    
+    };
+    
+     function termsPop() {
+      document.querySelector(".tos-pop").style.display = "flex";
+    }
+    function closeTOS() {
+      document.querySelector(".tos-pop").style.display = "none";
+    }
+    
+    var queryString;
+    var urlParams;
+    var formHeight;
+    var redirectSeconds = 5;
+    var paramStr;
+    document.addEventListener("DOMContentLoaded", () => {
+      queryString = window.location.search;
+      urlParams = new URLSearchParams(queryString);
+      phoneConvert();
+      autoPhoneInputConvert();
+      google();
+      facebook();
+      formHeight = document.getElementById('mainForm').clientHeight;
+      getCards();
+    });
+
+    document.querySelectorAll(".scroll-button").forEach(button => {
+      button.addEventListener('click', function handleClick(event) {
+        scrollFunction();
+      });
+    });
+    setTimeout( function() {
+        document.querySelectorAll(".event-card-custom").forEach(button => {
+          button.addEventListener('click', function handleClick(event) {
+            scrollFunction();
+          });
+        });
+      }, 1000);
+    
+    // Message Handler 
+    const message_success = document.getElementById('message-success');
+    const message_error = document.getElementById('message-error');
+    let loading = document.querySelector('.loading');
+
+    function messageHandle(type) {
+      document.querySelector(".modal").style.display = "inherit";
+      if (type === 'success') {
+        message_success.style.display = "inherit";
+        let newInterval = setInterval(function() {
+          redirectSeconds--;
+          document.getElementById("redirectSuccessTimer").innerText = redirectSeconds;
+          if (redirectSeconds === 0) {
+            clearInterval(newInterval);
+            location.href = paramStr;
+          }
+        }, 1000);
+      } else if (type === 'error') {
+        message_error.style.display = "inherit";
+      }
+
+      document.getElementById('form-1').style.display = "none";
+      //console.log(formHeight);
+      document.getElementById("mainForm").style.height = formHeight + "px";
+    }
+    
+    
 
     // Form 
     const form_1 = document.getElementById('form-1');
@@ -458,12 +575,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Form 
     var slider = tns({
       container: ".my-slider",
-      items: 5,
-      slideBy: "page",
+      items: 6,
+      slideBy: 3,
       mouseDrag: true,
       swipeAngle: false,
-      speed: 400,
-      controls: false,
+      autoplay: true,
+      autoplayHoverPause: true,
+      speed: 1000,
+      autoplayTimeout: 3000,
+      controls: true,
       nav: false,
     });
     //   Timer
@@ -505,47 +625,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById("first-name").focus();
     }
 
-    // Google Analytics
-    function google() {
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-5XNX7Z8');
-    };
-
-    // Facebook Pixel
-    function facebook() {
-      ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-          n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-      }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1033924800538096');
-      fbq('track', 'PageView');
-    }
 
     window.onload = function() {
       var fiveMinutes = 60 * 42,
